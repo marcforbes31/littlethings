@@ -1,0 +1,232 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url("../assets/dot-grid.png");
+    /* Patterns found at https://www.toptal.com/designers/subtlepatterns/page/6/ */
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.font-mynerve{
+    font-family: 'Mynerve', cursive;
+}
+
+.navbar-nav .nav-link.active{
+    color: #F593BD!important;
+}
+
+.font-roboto{
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-zeyada{
+    font-family: 'Zeyada', cursive;
+}
+
+.font-msz{
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+.add-outline{
+    outline: 1px solid black;
+}
+
+.text-pink{
+    color: #F593BD;
+}
+
+.text-navy{
+    color: #0e1d2f;
+}
+
+.text-yellow{
+    color: #FFBD59;
+}
+
+.dark-bg{
+    background-color: #0e1d2f;
+   
+}
+
+.box-shadow{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.pink-bg{
+    background-color: #FFE8F7;
+}
+
+.border-rad{
+    border-radius: 25px!important;
+}
+
+.greet-btn{
+    background-color: #F593BD;
+}
+
+.custom-card{
+    width: 100%;
+    background-color: #474554;
+}
+
+.next-button{
+    background-color: #ACA7CB;
+    width:50%;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.begin-button{
+    background-color: #54ECC4;
+    width:50%;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.error-button{
+    background-color: #FF8066;
+    width:25%;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.error-button:hover{
+    color: #FF8066;
+    background: white;
+}
+
+.success-button{
+    background-color: #00C9A7;
+    width:25%;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.success-button:hover{
+    color: #00C9A7;
+    background: white;
+}
+
+.next-button:hover{
+    color: #ACA7CB;
+    background: white;
+}
+
+.begin-button:hover{
+    color:#54ECC4;
+    background: white;
+}
+
+.text-indent{
+    text-indent: 50px;
+}
+
+.img-setting{
+    border-radius: 25px;
+    width: 500px;
+    height: 500px;
+}
+
+.rate-box{
+    max-width: 80px;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s ease;
+}
+
+.rate-box:hover{
+    scale: 1.2;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: #F593BD!important;
+}
+
+.chosen{
+    background-color: #F593BD!important;
+    font-weight: 900!important;
+    color: white!important;
+}
+
+.plane{
+    max-width: 700px;
+    max-height: 700px;
+}
+
+.section-setting{
+    height: 500px;
+    margin-bottom: 10rem;
+}
+
+.section-setting2{
+    height: 800px;
+    margin-bottom: 10rem;
+}
+
+
+
+.flip-card {
+    background-color: transparent;
+    max-width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  
+  }
+  
+  .flip-card-inner {
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #F593BD;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+  
