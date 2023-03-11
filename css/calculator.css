@@ -1,0 +1,103 @@
+.calc-frame{
+    background-color: #FFF5E4;
+    max-width: 450px;
+    width: 100%;
+    
+}
+
+.font-ob{
+    font-family: 'Orbitron', sans-serif;
+}
+
+.calc-head{
+    padding: 20px;
+}
+
+.num-row{
+    display: flex!important;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.num-shrink{
+    flex-shrink: 1;
+}
+
+.num-setting{
+    width: 100%;
+    /*max-width: 10vw;
+    height: 3.5vw; */
+    width: 80px!important;
+    height: 80px;
+    font-size: 2vw;
+}
+
+.btn-primary1{
+    color: #000000!important;
+    background-color: #FAD3E7!important;
+    border: 0;
+    transition: all 0.2s ease;
+}
+
+.btn-primary1:hover{
+    color: #FFFFFF!important;
+    background-color: #EFA3C8!important;
+}
+
+.btn-primary2{
+    color: #000000!important;
+    background-color: #FFD384!important;
+    border: 0;
+    transition: all 0.2s ease;
+}
+
+.btn-primary2:hover{
+    color: #000000!important;
+    background-color: #FFF9B0!important;
+}
+
+.btn-primary3{
+    color: #000000!important;
+    background-color: #FBA1A1!important;
+    border: 0;
+    transition: all 0.2s ease;
+}
+
+.btn-primary3:hover{
+    color: #FFFFFF!important;
+    background-color: #FBC5C5!important;
+}
+
+
+
+.pulse2 {
+	-webkit-animation: pulse 400ms infinite alternate;
+	        animation: pulse 400ms infinite alternate;
+}
+@-webkit-keyframes pulse {
+	0% { color: white; }
+	100% { color: green; }
+}
+@keyframes pulse {
+	0% { color: white; }
+	100% { color: green; }
+}
+
+.offcanvas.offcanvas-bottom{
+    height: 500px!important;
+}
+
+
+
+
+
+
+@media(max-width:520px){
+    .num-setting{
+        width: 100%;
+        max-width: 10vw;
+        height: 10vw; 
+       
+        font-size: 2vw;
+    }
+}

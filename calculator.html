@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--BOOTSTRAP CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!--BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+     <!--AJAX-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!--<link rel="icon" href="assets/heart-png.webp">-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mynerve&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/icons/heart.webp">
+    <title>Welcome</title>
+
+   <style>
+    html{
+        overflow-y: hidden!important;
+    }
+
+    @media(max-width:900px){
+        html{
+            overflow-y: scroll!important;
+        }
+    }
+
+
+   </style>
+
+   
+</head>
+<body>
+
+    <header>
+        
+
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              
+              <!--<h3 class="font-mynerve py-3 text-pink">Our Short Vacay</h3>-->
+              <h3 class="font-mynerve py-3 text-pink">Calculator</h3>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                </ul>
+
+                <ul class="navbar-nav mb-2 mb-lg-0" style="gap:3rem!important; margin-right: 2rem!important;">
+                    <li class="nav-item"><a href="#" class="text-decoration-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"><i class="bi bi-question-circle fs-1 text-pink"></i></a></li>
+                    <li class="nav-item"><a href="#" class="text-decoration-none visually-hidden" data-bs-toggle="modal" data-bs-target="#clueModal" id="togglemodal"><i class="bi bi-1-circle fs-1 text-pink"></i></a></li>
+                    <li class="nav-item"><a class="text-decoration-none visually-hidden" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="toggleright"><i class="bi bi-suit-club-fill fs-1 text-pink"></i></a></li>
+                </ul>
+
+              
+                
+              </div>
+            </div>
+          </nav>
+
+    </header>
+
+    <main>
+
+       <div class="container-fluid">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="calc-frame mx-auto py-3 px-3 border-rad">
+                    <div class="calc-head">
+                        <input class="form-control form-control-lg border-0 font-ob text-end" type="text" id="answer" placeholder="" aria-label=".form-control-lg example" readonly>
+                    </div>
+
+                    <div class="calc-body">
+                        <div class="container-fluid">
+                           
+
+                            <div class="num-row font-ob">
+                                <button class="btn-primary2 num-setting num-shrink rounded-circle special" value="clear">AC</button>
+                                <button class="btn-primary3 num-setting num-shrink rounded-circle special" value="sqrt"><span style="font-size: 1.7vw;">sqrt</span></button>
+                                <button class="btn-primary3 num-setting num-shrink rounded-circle special" value="percent"><span style="font-size: 1.7vw;">mod</span></button>
+                                <button class="btn-primary3 num-setting num-shrink rounded-circle operator" value="/">/</button>
+                                
+                            </div>
+
+                            <div class="num-row mt-3 font-ob">
+                                <button class="btn-primary1 num-setting num-shrink rounded-circle number" value="7">7</button>
+                                <button class="btn-primary1 num-setting num-shrink rounded-circle number" value="8">8</button>
+                                <button class="btn-primary1 num-setting num-shrink rounded-circle number" value="9">9</button>
+                                <button class="btn-primary3 num-setting num-shrink rounded-circle operator" value="*">x</button>
+                                
+                            </div>
+
+                            <div class="num-row mt-3 font-ob">
+                                <button class="btn-primary1 num-setting num-shrink rounded-circle number" value="4">4</button>
+                                <button class="btn-primary1 num-setting num-shrink rounded-circle number" value="5">5</button>
+                                <button class="btn-primary1 num-setting num-shrink rounded-circle number" value="6">6</button>
+                                <button class="btn-primary3 num-setting num-shrink rounded-circle operator" value="-">-</button>
+                                
+                            </div>
+
+                            <div class="num-row mt-3 font-ob">
+                                <button class="btn-primary1 num-setting num-shrink rounded-circle number" value="1">1</button>
+                                <button class="btn-primary1 num-setting num-shrink rounded-circle number" value="2">2</button>
+                                <button class="btn-primary1 num-setting num-shrink rounded-circle number" value="3">3</button>
+                                <button class="btn-primary3 num-setting num-shrink rounded-circle operator" value="+">+</button>
+                                
+                            </div>
+
+                            <div class="num-row mt-3 mb-3 font-ob">
+                                <button class="btn-primary1 num-setting num-shrink rounded-circle number" value="0">0</button>
+                                <button class="btn-primary1 num-setting num-shrink rounded-circle number" value=".">.</button>
+                                <button class="btn-primary2 num-setting num-shrink rounded-circle special" value="erase"><i class="bi bi-x-circle-fill"></i></button>
+                                <button class="btn-primary3 num-setting num-shrink rounded-circle" id="equals">=</button>
+                                
+                            </div>
+
+
+
+
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+       </div>
+
+
+       <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title font-ob text-pink" id="offcanvasBottomLabel">Well well well, what have we here?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body small font-ob">
+          <div class="container-fluid">
+            So you have come here for clues?<br>
+            Hate to break it to ya, but isn't this just a regular calculator?<br>
+            You're tryna tell me that there is absolutely NO WAY that this is it? And that there's gotta be something more lying under the rug somewhere?<br>
+            Sorry for wasting your time, if you feel that way. So here are some random facts and trivia for you:
+            <ul>
+                <li>There are 2 well-known Premier League clubs based in Manchester (We obviously know which one is bigger)</li>
+                <li>Back in high school they taught us that there are a few types of 'vores' out there. Vores as in Herbivore, etc.</li>
+                <li>People always say its better to think outside the box. That's why I use bullet lists, because they're different. But if you asked me about the root of my obsession towards bullet lists, I do not know what to tell you.</li>
+                <li>It's such a shame they had to remove Pluto from the Solar System, right? I liked it better during the Pluto era.</li>
+            </ul>
+            Welp, that's all from me. I once again do apologize if I wasted your time even more. If you'd like, you can just exit this site.<br>
+            Now remember, don't overthink it. It's just a calculator.
+          </div>
+        </div>
+      </div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title font-ob" id="offcanvasRightLabel">The Final Clue</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <img src="assets/keypad.png" class="img-fluid mx-auto d-block border-rad" alt="">
+            <p class="py-3 px-3 font-ob">Do not let anybody know of this information I have provided. Especially the elders.
+                I trust in your intellectual capabilities along with the prophecy. You haven't heard of this prophecy, no? It stated that
+                a beautiful warrior will appear out of thin air within the first quarter of the year, who will then become the only person
+                to have ever broken the chains and riddles of the elders. I very much believe that you are who the prophecy is referring to. 
+            </p>
+        </div>
+        </div>
+
+
+
+      <div class="modal fade" id="clueModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border-rad">
+            <div class="modal-header w-100 text-center border-0">
+              <h1 class="modal-title w-100 fs-1 font-ob" id="exampleModalLabel">Well Done!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-5 font-ob text-muted">
+              I admire your persistence, you stuck to your gut feeling and indeed you were right. This may not be JUST a calculator after all, huh?
+            </div>
+            <div class="border-0 w-100 text-center">
+             <p class="font-ob px-5 py-3">I am somewhat impressed. Very well then, I guess you shall proceed.</p>
+             <p class="font-ob px-3 py-3 fs-2 text-pink"><strong>JOIN MISLEADS</strong></p>
+             <p class="font-ob px-5 py-3"><strong>What you see above here is an encryption of some sort, laid out by the elders, long long ago.
+                If you wish to uncover the further depths of this calculator, you will have to re-arrange the words. I do not know what the answer is but I know it has 3 words, so all hope lies on you, warrior. Best of luck.
+             </strong></p>
+             <p class="font-ob px-5 py-3 text-muted">
+                You may need a piece of paper for this. I may not know the answer but I can help with one thing.
+                After you have figured out this puzzle. Type in the code 5683. This is as far as I can help. 
+
+             </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <audio id="audioAccess">
+        <source src="assets/audio/open.mp3" type="audio/mpeg">
+      </audio>
+
+      <audio id="audioUnlock">
+        <source src="assets/audio/lock.mp3" type="audio/mpeg">
+      </audio>
+
+      <audio id="audioShow">
+        <source src="assets/audio/show.mp3" type="audio/mpeg">
+      </audio>
+
+      <audio id="audioShine">
+        <source src="assets/audio/shine.mp3" type="audio/mpeg">
+      </audio>
+        
+        
+    </main>
+
+        
+
+    <footer>
+
+    </footer>
+
+    <script>
+        $(function(){
+
+             
+            $('.number').click(function(){
+                var value = this.value;
+                
+                document.getElementById('answer').value += value;
+            });
+
+            $('.operator').click(function(){
+                var value = this.value;
+               
+                document.getElementById('answer').value += value;
+                
+            });
+
+            $('.special').click(function(){
+                var value = this.value;
+
+                if(value == "clear"){
+                    $('#answer').val("");
+                    equation = $('#answer').val();
+                }
+
+                else if (value == "erase"){
+                    var input = document.getElementById('answer').value;
+                    document.getElementById('answer').value = input.substring(0, input.length - 1);
+                }
+
+                else if(value == "percent"){
+                    document.getElementById('answer').value += '%';
+                }
+
+                else if(value == "sqrt"){
+                    result = eval($('#answer').val());
+                    let sqrt = Math.sqrt(result);
+                    document.getElementById('answer').value = sqrt;
+                }
+                
+            });
+
+            $('#equals').click(function(){
+                var value = this.value;
+                result = eval($('#answer').val());
+
+                if(result == 2329){
+                    playUnlock();
+                    document.getElementById('answer').value = "";
+                    setTimeout(getClue, 2000);
+                    //setTimeout(playAccess, 5000);
+                    
+                }
+                else if(result == 5683){
+                    $('#offcanvasRight').offcanvas('show');
+                    let rightOC = document.getElementById('toggleright');
+                    rightOC.classList.remove('visually-hidden');
+
+                }
+                else if(result == 52764630470653){
+                    playAccess();
+                    document.getElementById('answer').value = "ACCESS GRANTED";
+                    document.getElementById('answer').classList.add("pulse2");
+                    setTimeout(finish, 5000);
+                } else {
+                    document.getElementById('answer').value = result;
+                }
+
+            });
+        });
+
+        function playAccess(){
+            var audio = document.getElementById("audioAccess");
+            audio.play();
+        }
+
+        function playUnlock(){
+            var audio = document.getElementById("audioUnlock");
+            audio.play();
+        }
+
+        function playShow(){
+            var audio = document.getElementById("audioShow");
+            audio.play();
+        }
+
+        function playShine(){
+            var audio = document.getElementById("audioShine");
+            audio.play();
+        }
+
+        function getClue(){
+            let selected = document.getElementById('answer');
+            selected.value = "GENERATING CLUE"
+            selected.classList.add("pulse2");
+            setTimeout(showModal, 4000);
+        }
+
+        function showModal(){
+            let selected = document.getElementById('answer');
+            selected.value = "";
+            selected.classList.remove("pulse2");
+            let modal = document.getElementById('togglemodal');
+            modal.classList.remove("visually-hidden");
+            $('#clueModal').modal('show');
+            playShow();
+        }
+
+        function finish(){
+            let selected = document.getElementById('answer');
+            selected.classList.remove("pulse2");
+            window.location.href = "loading.html"
+        }
+
+
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    
+</body>
+</html>
